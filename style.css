@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+
+#one-window {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    height: 100%;
+    width: 100%;
+}
+
+#window {
+    position: fixed;
+    height: 500px;
+    width: 300px;
+    /* stroke: rgba(153, 102, 51, 0.5);
+    stroke-width: 6; */
+    fill: rgba(0, 153, 255, 0.5);
+    filter: url(#f1);
+}
+
+#tv {
+    position: fixed;
+    top: 30px;
+    right: 10%;
+    height: 220px;
+    width: 200px;
+    filter: url(#f2);
+}
+
+#tv-rect {
+    transform: translate(0, 20px);
+    width: 200px;
+    height: 200px;
+    stroke: rgb(57, 70, 70);
+    stroke-width: 3;
+    fill: url(#grad1);
+}
+
+#smoke {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(35deg, rgba(255, 204, 224, 0.5), rgba(255, 26, 117, 0.5), rgba(102, 0, 41, 0),rgba(51, 0, 20, 0));
+	background-size: 400% 400%;
+    animation-name: gradient;
+    animation-timing-function: ease;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#smoke-rect {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 200%;
+    animation-name: gradient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#bubble-div {
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    width: 500px;
+    height: 500px;
+    /* animation-name: burst;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite; */
+}
+
+.text {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    text-align: center;
+}
+
+
+@keyframes opacity {
+    0% {opacity: 0%;}
+    /* 25% {opacity: 100%}
+    25% {opacity: 100%}
+    75% {opacity: 50%;} */
+    100% {opacity: 100%}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
